@@ -36,6 +36,7 @@ from the RX queue, sending messages, and higher level operations like request-re
 and multipart transactions.
 """
 
+from __future__ import absolute_import
 import loxi
 import loxi.of14
 import logging

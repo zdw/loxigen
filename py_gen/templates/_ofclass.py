@@ -57,6 +57,13 @@ class ${ofclass.pyname}(${superclass_pyname}):
 :: #endfor
         return True
 
+    def __hash__(self):
+        return hash(
+:: for m in normal_members:
+            self.${m.name},
+:: #endfor
+            )
+
     def pretty_print(self, q):
 :: include('_pretty_print.py', ofclass=ofclass)
 

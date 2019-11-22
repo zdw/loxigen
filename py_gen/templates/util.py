@@ -31,20 +31,7 @@
 
 import struct
 import loxi
-import const
-import common
-import action
-:: if version >= OFVersions.VERSION_1_1:
-import instruction
-:: #endif
-:: if version >= OFVersions.VERSION_1_2:
-import oxm
-:: #endif
-:: if version >= OFVersions.VERSION_1_3:
-import action_id
-import instruction_id
-import meter_band
-:: #endif
+from . import const
 
 def pretty_mac(mac):
     return ':'.join(["%02x" % x for x in mac])
